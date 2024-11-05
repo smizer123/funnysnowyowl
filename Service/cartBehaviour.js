@@ -4,8 +4,6 @@ let closeButton = document.querySelector(".checkoutHeaderClose");
 let cartAdd = document.querySelector(".t3CheckoutBorder");
 let body = document.body;
 
-console.log(closeButton);
-
 function showCheckoutOverlay(){
     cartOverlay.style.display = "flex";
     cartOverlay.style.backgroundColor = "white";
