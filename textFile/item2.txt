@@ -1,0 +1,3 @@
+Enzyme activity: Measuring the rate at which enzymes catalyze reactions.
+Enzyme inhibition: Studying how inhibitors affect enzyme activity.
+Enzyme kinetics: Analyzing the relationship between substrate concentration and reaction rate.

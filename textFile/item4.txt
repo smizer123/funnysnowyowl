@@ -1,0 +1,3 @@
+Bacterial growth: Studying the growth patterns of bacteria under different conditions.
+Antibiotic susceptibility testing: Determining the effectiveness of antibiotics against bacteria.
+Microbial metabolism: Investigating how microorganisms break down substances.

@@ -1,0 +1,2 @@
+Organoids are 3D cell cultures that mimic the structure and function of organs.
+They are derived from stem cells or primary cells and can be used to study disease mechanisms, drug testing, and regenerative medicine.

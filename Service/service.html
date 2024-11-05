@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="service.css">
+    <title>Service</title>
+</head>
+<body>
+    <div class="header">
+        <div class="headerLeft" style="margin-left: 4%;">
+            <a href="../index.html" style="margin-left: 0;" class="headerValue"><img src="https://picsum.photos/200/100" height="50px"></a>
+            <a href="../index.html" class="headerValue">Home</a>
+            <a href="service.html" class="headerValue">Service</a>
+            <a class="headerValue">Gallery</a>
+        </div>
+        <div class="headerRight" style="margin-right: 4%;">
+            <a class="headerValue"><img src="../img/search.svg" height="20px"></a>
+            <a style="margin-right: 0;" class="headerValue cart"><img src="../img/shoppingCart.svg" height="20px"></a> <!--add a notification top right with num item inside-->
+        </div>
+    </div>
+
+    <div class="tabContainer">
+        <div class="tab1">
+            <a class="t1In">In vivo</a>
+            <a class="t1Ex">Ex vivo</a>
+        </div>
+        <div class="tab2 In">
+            <a id="item1">Cell Culture</a>
+            <a id="item2">Enzyme Kinetics</a>
+            <a id="item3">Molecular Biology</a>
+            <a id="item4">Microbiology</a>
+            <a id="item5">Immunology</a>
+        </div>
+        <div class="tab2 Ex">
+            <a id="item6">Organ Perfusion</a>
+            <a id="item7">Tissue Slices</a>
+            <a id="item8">Organoids</a>
+            <a id="item9">Skin Equivalents</a>
+            <a id="item10">Immune Cell Assays</a>
+        </div>
+        <div class="tab3">
+            <a class="t3Header">Undefined</a>
+            <ul class="t3Body">
+            </ul>
+            <div class="t3Image">
+                <img src="https://picsum.photos/400/200">
+            </div>
+            <div class="t3Checkout">
+                <div class="t3CheckoutBorder">
+                    <a>Add to cart</a>
+                    <img src="../img/rightArrow.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="checkoutOverlay">
+        <div class="checkoutHeaderContainer">
+            <a class="checkoutHeader">Add recently</a>
+            <img class="checkoutHeaderClose" src="../img/cross.svg" height="30px">
+        </div>
+    </div>
+    <script type="module" src="service.js"></script>
+    <script type="module" src="cartBehaviour.js"></script>
+    <script type="module" src="cartItemTemplate.js"></script>
+</body>
+</html>

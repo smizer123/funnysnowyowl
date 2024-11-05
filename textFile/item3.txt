@@ -1,0 +1,4 @@
+DNA cloning: Creating recombinant DNA molecules.
+PCR (Polymerase Chain Reaction): Amplifying specific DNA sequences.
+Gel electrophoresis: Separating DNA or protein molecules based on size.
+Western blotting: Detecting specific proteins in a sample.

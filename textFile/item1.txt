@@ -1,0 +1,5 @@
+Cell growth and proliferation: Studying how cells divide and multiply under specific conditions.
+Cell differentiation: Investigating how cells specialize into different types.
+Apoptosis: Examining programmed cell death.
+Gene expression analysis: Analyzing the activity of genes in cells.
+Drug testing: Evaluating the efficacy and toxicity of drugs on cells.
