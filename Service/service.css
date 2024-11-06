@@ -16,6 +16,7 @@
     border: 2px grey;
     border-style: solid none solid solid;
     height: fit-content;
+    cursor: pointer;
 }
 
 .tab1 a {
@@ -33,6 +34,7 @@
     grid-area: row2;
     border: 2px solid grey;
     height: fit-content;
+    cursor: pointer;
 }
 
 .tab2 a {
@@ -71,7 +73,7 @@
 }
 
 .t3Body {
-    margin: 15px;
+    margin: 5% 5% 5% 3%;
     grid-area: t3Description;
     /* border: 2px solid black; */
 }
@@ -113,7 +115,8 @@
     align-items: center;
     justify-content: center;
     border: 2px solid black;
-    border-radius: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .t3CheckoutBorder:hover {

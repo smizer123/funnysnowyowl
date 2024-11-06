@@ -32,6 +32,7 @@ function showt2Ex(event){
 }
 
 function showt3(event){
+    console.log(event.target);
     t2In.style.borderStyle = "solid none solid solid";
     t2Ex.style.borderStyle = "solid none solid solid";
     t3.style.display = "grid";
@@ -39,7 +40,6 @@ function showt3(event){
     t3.children[1].innerHTML = "";
     currentItem = event.target.innerHTML;
     currentId = event.target.id.slice(-1);
-    console.log(addedList);
     try {fetch("../textFile/" + event.target.id + ".txt")
     .then(response => response.text())
     .then(text => {
@@ -55,20 +55,74 @@ function showt3(event){
 }
 
 function addCartItem(){
-    if (addedList.includes(`item${currentId}`)){
+    if (addedList.includes(`${currentId}`)){
         alert(`You've already add ${currentItem}`);
     }
     else {
         let itemHtml = document.createElement("div");
         itemHtml.setAttribute("class", "checkoutItem");
-        itemHtml.innerHTML = cartTemplate(currentItem, `itemInput${currentId}`, 1);
+        itemHtml.innerHTML = cartTemplate(currentItem, `itemInput${currentId}`, `idSub${currentId}`, `idAdd${currentId}`, 1);
         checkoutOverlay.insertAdjacentElement("beforeend", itemHtml);
-        addedList.push(`item${currentId}`);
+        addedList.push(`${currentId}`);
         alert(`add ${currentItem} to cart`);
     }
 }
-    
+
+function addSubFunc(){
+    addedList.forEach((item) => {
+        let subItem = document.querySelector(`#idSub${item.slice(-1)}`);
+        let itemInput = document.querySelector(`#itemInput${item.slice(-1)}`);
+        subItem.param = itemInput;
+        subItem.removeEventListener("click", sub);
+        subItem.addEventListener("click", sub);
+    });
+}
+
+function addAddFunc(){
+    addedList.forEach((item) => {
+        let addItem = document.querySelector(`#idAdd${item.slice(-1)}`);
+        let itemInput = document.querySelector(`#itemInput${item.slice(-1)}`);
+        addItem.param = itemInput;
+        addItem.removeEventListener("click", add);
+        addItem.addEventListener("click", add);
+    });
+}
+
+function sub(event){
+    let value = parseInt(event.target.param.value);
+    value -= 1;
+    event.target.param.value = value;
+}
+
+function add(event){
+    let value = parseInt(event.target.param.value);
+    value += 1;
+    event.target.param.value = value;
+}
+
+function addRemove(){
+    let rmv = document.querySelectorAll(".checkoutRemove");
+    rmv.forEach((item) => {
+        item.addEventListener("click", removeItem);
+    });
+}
+
+function removeItem(event){
+    event.target.parentNode.parentNode.remove();
+    let itemId = event.target.parentNode.children[1].children[0].id
+    console.log(event.target.parentNode.children[1].children[0].id);
+    addedList = addedList.filter(function(item){
+        return item !== itemId.slice(-1);
+    });
+}
+
+cart.addEventListener("click", () => {
+    addAddFunc();
+    addSubFunc();
+    addRemove();
+});
+
 t1In.addEventListener("click", showt2In);
 t1Ex.addEventListener("click", showt2Ex);
-[t2In, t2Ex].forEach((element) => element.addEventListener("click", showt3));
+[t2In, t2Ex].forEach((element) => element.addEventListener("mousedown", showt3));
 t3.children[3].addEventListener("click", addCartItem);
