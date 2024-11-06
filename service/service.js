@@ -6,16 +6,17 @@ let t2In = document.querySelectorAll(".tab2")[0];
 let t2Ex = document.querySelectorAll(".tab2")[1];
 let t3 = document.querySelector(".tab3");
 let checkoutOverlay = document.querySelector(".checkoutOverlay");
-let cart = document.querySelector(".cart");
+let cart = document.querySelector(".headerCartLink");
+let cartCheckout = document.querySelector(".headerCartCheckout");
 let currentItem = "";
 let currentId;
 let addedList = [];
 
-function addBulletPoint(point, indx){
+function addBulletPoint(point){
     t3.children[1].innerHTML += `<li>${point}</li>`
 }
 
-function showt2In(event){
+function showt2In(){
     t2Ex.style.display = "none";
     t2In.style.display = "unset";
     t3.style.display = "none";
@@ -23,7 +24,7 @@ function showt2In(event){
     t2Ex.style.border = "2px solid grey";
 }
 
-function showt2Ex(event){
+function showt2Ex(){
     t2In.style.display = "none";
     t2Ex.style.display = "unset";
     t3.style.display = "none";
@@ -64,6 +65,7 @@ function addCartItem(){
         itemHtml.innerHTML = cartTemplate(currentItem, `itemInput${currentId}`, `idSub${currentId}`, `idAdd${currentId}`, 1);
         checkoutOverlay.insertAdjacentElement("beforeend", itemHtml);
         addedList.push(`${currentId}`);
+        cartCheckout.innerHTML = `Check Out (${addedList.length})`; //checkout item count -> plan to be a notification top right of image
         alert(`add ${currentItem} to cart`);
     }
 }
@@ -109,8 +111,7 @@ function addRemove(){
 
 function removeItem(event){
     event.target.parentNode.parentNode.remove();
-    let itemId = event.target.parentNode.children[1].children[0].id
-    console.log(event.target.parentNode.children[1].children[0].id);
+    let itemId = event.target.parentNode.children[1].children[0].id;
     addedList = addedList.filter(function(item){
         return item !== itemId.slice(-1);
     });

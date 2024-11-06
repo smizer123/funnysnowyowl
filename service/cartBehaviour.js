@@ -1,4 +1,4 @@
-let cart = document.querySelector(".cart").children[0];
+let cart = document.querySelector(".headerCartLink").children[0];
 let cartOverlay = document.querySelector(".checkoutOverlay");
 let closeButton = document.querySelector(".checkoutHeaderClose");
 let cartAdd = document.querySelector(".t3CheckoutBorder");

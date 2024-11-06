@@ -1,0 +1,68 @@
+*, html {
+    margin: 0;
+    font-family: Calibri, sans-serif;
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 450px;
+    border: 2px solid black;
+}
+
+.formTitle, .formValue, .reqItem, .submitForm {
+    margin: 0 20px;
+}
+
+.formTitle {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.formValue {
+    margin-top: 5px;
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-indent: 10px;
+}
+
+.reqItem {
+    margin-top: 10px;
+    display: flex;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.itemPrototype {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    border: 1px solid black;
+}
+
+.itemPrototype a {
+    margin: 5px;
+    font-size: 20px;
+    /* border: 2px solid black; */
+}
+
+.itemPrototype img {
+    width: 50px;
+}
+
+.submitForm {
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+}

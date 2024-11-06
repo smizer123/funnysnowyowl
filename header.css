@@ -8,20 +8,14 @@
     display: flex;
     position: relative;
     background-color: goldenrod;
+    height: 50px;
+    width: 100%;
     /* border: 2px solid black; */
 }
 
 .headerLeft {
-    width: 100%;
-    height: auto;
     display: flex;
-    /* border: 2px solid black; */
-}
-
-.headerRight {
-    width: auto;
-    height: auto;
-    display: flex;
+    margin-left: 4%;
     /* border: 2px solid black; */
 }
 
@@ -33,15 +27,102 @@
     font-size: 18px;
     text-decoration: none;
     color: black;
+    cursor: pointer;
     /* border: 2px solid black; */
 }
 
 .headerValue:hover {
     text-decoration: underline grey;
     text-underline-offset: 4px;
-    cursor: pointer;
 }
 
 .headerValue img {
-    width: auto;
+    height: 50px;
 }
+
+.headerRight {
+    display: flex;
+    margin: 0 4% 0 auto;
+    /* border: 2px solid black; */
+}
+
+.headerSearch {
+    display: flex;
+    justify-content: center;
+    padding: 0 5% 0 5%;
+    /* border: 2px solid black; */
+}
+
+.headerSearchInput {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+.headerSearchInput input {
+    display: flex;
+    height: 30px;
+    padding-left: 10px;
+    border-style: none;
+}
+
+.headerSearchInput input::-webkit-search-cancel-button{
+    margin: 0 5px 0 3px; 
+}
+
+.headerSearchImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    /* border: 2px solid black; */
+}
+
+.headerSearchLink {
+    display: flex;
+    cursor: pointer;
+    /* border: 2px solid black;  */
+}
+
+.headerSearchLink img {
+    height: 20px;
+    margin: 5px;
+}
+
+.headerCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    /* border: 2px solid black; */
+}
+
+.headerCartLink {
+    display: flex;
+    cursor: pointer;
+    /* border: 2px solid black; */
+}
+
+.headerCartLink img {
+    margin: 5px;
+    height: 20px;
+}
+
+.headerCartCheckout {
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    /* border: 2px solid black; */
+}
+
+.headerCartCheckout:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+

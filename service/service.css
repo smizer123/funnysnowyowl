@@ -1,7 +1,7 @@
 .tabContainer {
     margin: 5% 4%;
     display: grid;
-    grid-template-columns: 15% 15% 50% 20%;
+    grid-template-columns: 10% 15% 50% 25%;
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas: 
         "row1 row2 row3 row3"
@@ -205,6 +205,7 @@
 
 .checkoutRemove {
     margin: 0 20px 0 0;
+    cursor: pointer;
     /* border: 2px solid black; */
 }
 

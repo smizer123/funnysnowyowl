@@ -10,22 +10,34 @@
 </head>
 <body>
     <div class="header">
-        <div class="headerLeft" style="margin-left: 4%;">
-            <a href="./index.html" style="margin-left: 0;" class="headerValue"><img src="https://picsum.photos/200/100" height="50px"></a>
+        <div class="headerLeft">
+            <a href="./index.html" class="headerValue"><img src="https://picsum.photos/200/100"></a>
             <a href="./index.html" class="headerValue">Home</a>
             <a href="./service/service.html" class="headerValue">Service</a>
             <a href="./gallery/gallery.html" class="headerValue">Gallery</a>
         </div>
-        <div class="headerRight" style="margin-right: 4%;">
-            <a class="headerValue"><img src="./img/search.svg" height="20px"></a>
-            <a style="margin-right: 0;" class="headerValue cart"><img src="./img/shoppingCart.svg" height="20px"></a>
+        <div class="headerRight">
+            <div class="headerSearch">
+                <div class="headerSearchInput">
+                    <form id="searchBar">
+                        <input type="search" placeholder="Search Here">
+                    </form>
+                </div>
+                <div class="headerSearchImage">
+                    <a class="headerSearchLink"><img src="./img/search.svg"></a>
+                </div>
+            </div>
+            <div class="headerCart">
+                <a class="headerCartLink"><img src="./img/shoppingCart.svg"></a>
+                <a href="./checkout/checkout.html" class="headerCartCheckout">Check Out</a>
+            </div>
         </div>
     </div>
 
     <div id="section1">
         <div class="section1Text">
-            <p id="s1THead">Lorem ipsum dolor sit amet</p>
-            <p id="s1TBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula urna dui, eu dictum nunc tincidunt quis. Vestibulum id bibendum risus. Ut euismod augue eget urna faucibus tempor. Curabitur quis vehicula erat. Integer dictum dictum cursus. Suspendisse potenti. Donec rutrum at dui ac suscipit. Pellentesque erat augue, vehicula quis feugiat vitae, suscipit at nunc. Ut eget lorem sem. Sed eu hendrerit velit. Pellentesque egestas nulla tellus, sed consequat purus rutrum vitae. Curabitur scelerisque augue sed pulvinar placerat. Morbi eget eros a tortor ultrices gravida non bibendum turpis. Sed pharetra mattis tristique. Sed aliquet rutrum ligula, id varius est. Nam tempor non mi sit amet rutrum.</p>
+            <p id="s1THead">Innovative Solutions, Scientifically Proven</p>
+            <p id="s1TBody">[Your Company Name] is a cutting-edge science and technology company dedicated to developing innovative solutions. Our team of experienced scientists and engineers leverages advanced research and development to address real-world challenges. From groundbreaking discoveries to practical applications, we strive to push the boundaries of science and technology, delivering impactful results that benefit society.</p>
         </div>
         <div class="section1Video">
             <video autoplay="autoplay" loop muted width="100%">
@@ -42,7 +54,7 @@
             <a class="checkoutItemName">Storage haven't been implemented yet.</a>
         </div>
     </div>
-    <script src="./index.js"></script>
     <script type="module" src="./service/cartBehaviour.js"></script>
+    <script src="./header.js"></script>
 </body>
 </html>
